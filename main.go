@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+///
 type we struct {
 	are  are
 }
@@ -13,7 +14,13 @@ type are struct {
 type the struct {
 	 best string
 }
+///
 
+type hello struct {
+	world string
+}
+
+///
 
 
 
@@ -28,5 +35,15 @@ func main(){
 	}
 
 	fmt.Println(we.are.the.best)
+
+	//
+
+	hello := hello {
+		world: "hello world",
+	}
+
+	fmt.Println(hello.world)
+
+	//
 
 }
