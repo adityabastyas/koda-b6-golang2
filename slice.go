@@ -60,6 +60,11 @@ type my []favourite
 
 //
 
+type num struct {
+	first  [2]int
+	second [3]int
+}
+
 func Slice() {
 
 	we := we{
@@ -121,5 +126,18 @@ func Slice() {
 	}
 
 	fmt.Println(my[0].favourite[3].fruit.is)
+
+	//
+
+	num := num{
+		first: [2]int{
+			2, 15,
+		},
+		second: [3]int{
+			8, 90, 17,
+		},
+	}
+
+	fmt.Println(num.first[1] + num.second[2])
 
 }
