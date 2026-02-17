@@ -42,6 +42,24 @@ type obj struct {
 	str []Level1
 }
 
+//
+
+type fruit struct {
+	is string
+}
+
+type item struct {
+	fruit fruit
+}
+
+type favourite struct {
+	favourite []item
+}
+
+type my []favourite
+
+//
+
 func Slice() {
 
 	we := we{
@@ -73,7 +91,7 @@ func Slice() {
 						man: []man{
 							{
 								tech: tech{
-									academy: "Koda Academy",
+									academy: "Tech Academy",
 								},
 							},
 						},
@@ -84,5 +102,24 @@ func Slice() {
 	}
 
 	fmt.Println(obj.str[3][1][2].man[0].tech.academy)
+
+	//
+
+	my := my{
+		{
+			favourite: []item{
+				{},
+				{},
+				{},
+				{
+					fruit: fruit{
+						is: "Apple",
+					},
+				},
+			},
+		},
+	}
+
+	fmt.Println(my[0].favourite[3].fruit.is)
 
 }
